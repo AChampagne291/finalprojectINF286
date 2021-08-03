@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="StyleSheet.css"> 
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assignment_9_style.css"> 
+    </head>
+    <body>
+
+        <!--Main Title-->
+        <header class="main_header">
+            <h1 id="Homepage_Title"> Andrew Champagne </h1>
+            <h3 id="login">Personal Website</h2>
+        </header>
+    
+        <!--Quick Link Bar-->
+        <ul id="main_nav_bar" class="main_nav_bar">
+            <li> <a href="professional.html">Professional</a> </li>
+            <li> <a href="education.html">Education</a> </li>
+            <li> <a href="hobbies.html">Hobbies</a> </li> 
+            <li> <a href="contact.html">Contact</a>  </li>
+        </ul>       
+        
+        <!--Main Image-->        
+        <img src="https://user-images.githubusercontent.com/87615778/128062646-ce4fd9bd-8b4f-4089-809d-9ce22a46b5eb.JPG" id="main_img"> 
+        
+
+        <!--Catch Phrase-->
+        <div id="catch_phrase">
+            I am a Detective with the Campbell County Police Department, a student at NKU and a full time adventurer.
+        </div>
+
+        <!--Image Gallery-->
+        <div class="gallery">
+            <div>
+                <a href="professional.html">
+                <figure
+                    ><img src="https://user-images.githubusercontent.com/87615778/128062629-f3a1a899-1b87-4749-8bbc-d46889048ee6.jpg" >
+                    <figcaption>Professional Expierences</figcaption>
+                </figure>
+                </a>  
+            </div>
+            <div>
+                <a href="education.html">
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/87615778/128062637-7775f9c0-7192-4fd4-b387-2ea14c9bfbf9.jpeg">
+                    <figcaption>Educational Backgound</figcaption>
+                </figure>
+                </a>
+            </div>
+            <div>
+                <a href="hobbies.html">
+                <figure>  
+                    <img src="https://user-images.githubusercontent.com/87615778/128062633-68bf45b3-f7d1-42b5-a610-ec0fd9e3dfbd.jpg">
+                    <figcaption>Hobbies and Interest</figcaption>
+                </figure>      
+                </a>  
+            </div>
+        </div>
+
+        <!--Image Slideshow-->
+        <div id="slideshow">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062635-5eb4799b-0d04-4b1b-8af5-2f43cc865571.jpg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062625-36f518ef-1dc1-4bf5-8c06-48ac82b50ddc.jpg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062619-ad5412d4-3641-458c-ae5e-ed0becfa77f7.jpg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062641-1a4267a2-2412-4323-9f66-a713d2d13329.jpeg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062644-3aef854a-eb19-426a-9088-1c32998ab740.jpeg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062674-6f15aee2-29c9-4e1a-9940-b672623a7ed7.JPG">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062612-c15e6be8-1987-472e-9b95-8b413dedc337.jpg">
+            <img class="mySlides" src="https://user-images.githubusercontent.com/87615778/128062608-05f8e062-c6f3-493a-be64-a45a68005ef8.jpg">
+            <script>
+                var slideIndex = 0;
+                carousel();
+
+                function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1}
+                x[slideIndex-1].style.display = "block";
+                setTimeout(carousel, 2000); 
+                }
+            </script>
+        </div>
+        
+        
+       
+        <footer>
+           
+        </footer>
+        
+    </body>
+</html>
+</body>
