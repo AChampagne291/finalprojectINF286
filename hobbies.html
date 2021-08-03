@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="StyleSheet.css"> 
+</head>
+<body>
+
+    <header class="main_header">
+        <h1 id="Homepage_Title"> Hobbies and Pasions </h1>
+        <h3 id="login">Andrew Champagne</h3>
+    </header>
+
+    <!--Quick Link Bar-->
+    <ul id="main_nav_bar" class="main_nav_bar">
+        <li> <a href="Homepage.html"> Home </a> </li>
+        <li> <a href="professional.html">Professional</a> </li>
+        <li> <a href="education.html">Education</a> </li>
+        <li> <a href="contact.html">Contact</a> </li>       
+    </ul> 
+    
+    <!--Display List-->
+    <div class="main_content">    
+        <div class="display_list1">
+            <!--Dolly Sods-->
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.fs.usda.gov/recarea/mnf/recarea/?recid=12366"><img src="Pictures/backpacking/20191101_183724.jpg"> </a> </div> 
+            <div class="text"> I am an avid back backpacker. In Febuary of 2019, we spent three days in Dolly 
+                Sods, West Verginia. Tempatures got down to 8 degrees freinhite at night. 
+                <!--Modal-->
+            </div>
+        </div>
+
+        <div class="display_list2">
+            <!--Balsams Gap-->
+            <div class="text"> I am also passionate about cycling. Here we are cycling Balsams gap. Highest point of the Blue Ridge Mountain Parkway in North Carolina. 
+                <!--Modal-->
+                <button class="modal-button" href="#myModal2">Trip Data</button>
+                <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal_img">
+                           <img src="Pictures/bikes/balsam_trip.jpg"> 
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.virtualblueridge.com/parkway-place/balsam-gap-overlook/"><img src="Pictures/bikes/GOPR0400_1562344134516_high.JPG"></a> </div>
+        </div>
+
+        <div class="display_list1">
+            <!--Cranberry-->
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.fs.usda.gov/recarea/mnf/recarea/?recid=12368"><img src="Pictures/backpacking/GOPR0448_1612124273795.JPG"> </a> </div> 
+            <div class="text"> Another winter backpacking trip. Febuary of 2021. Carnberry West Virginia. We recieved four inches of snow over night.
+            </div>  
+        </div>        
+
+        <div class="display_list2">
+            <!--My Bike-->
+            <div class="text"> This is my bike. Specialized Roubaix.
+                <!--Modal-->
+                <button class="modal-button" href="#myModal4">Bike Spec.s</button>
+                <div id="myModal4" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    </div>
+                    <div class="modal-body">
+                    <p>Full Shimano 105 group set</p>
+                    <p>Shimano spc clips</p>
+                    <p>Zipp Service Course SL-70 dropbars</p>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.specialized.com/us/en/performance-road-bikes"><img src="Pictures/bikes/20180919_112713.jpg"></a> </div>
+        </div>  
+
+    </div>
+
+    <script>
+        var btn = document.querySelectorAll("button.modal-button");
+        var modals = document.querySelectorAll('.modal');
+        var spans = document.getElementsByClassName("close");
+        for (var i = 0; i < btn.length; i++) {
+         btn[i].onclick = function(e) {
+            e.preventDefault();
+            modal = document.querySelector(e.target.getAttribute("href"));
+            modal.style.display = "block";
+         }
+        }
+        for (var i = 0; i < spans.length; i++) {
+         spans[i].onclick = function() {
+            for (var index in modals) {
+              if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+            }
+         }
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+             for (var index in modals) {
+              if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+             }
+            }
+        }
+    </script>
+    
+
+</body>
