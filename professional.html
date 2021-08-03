@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="StyleSheet.css"> 
+</head>
+<body>
+
+    <header class="main_header">
+        <h1 id="Homepage_Title"> Professional Work Expierence </h1>
+        <h3 id="login">Andrew Champagne</h3>
+    </header>
+
+    <!--Quick Link Bar-->
+    <ul id="main_nav_bar" class="main_nav_bar">
+        <li> <a href="Homepage.html"> Home </a> </li>
+        <li> <a href="education.html"> Education </a> </li>
+        <li> <a href="hobbies.html"> Hobbies </a>  </li> 
+        <li> <a href="contact.html"> Contact </a>   </li>       
+    </ul> 
+
+    <!--Display List-->
+    <div class="main_content">
+        <!--Departments-->    
+        <div class="display_list1">
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://campbellcountyky.gov/department/index.php?structureid=38"><img src="https://user-images.githubusercontent.com/87615778/128062644-3aef854a-eb19-426a-9088-1c32998ab740.jpeg"> </a> </div> 
+            <div class="text"> I have worked in law enforcement for 12 years. I currently work for Campbell County Police Department. Campbell County Police services a populaiton of
+                90,000 residences acrossed 167 square miles. I am currently assigned to investigations.
+                <!--Modal-->
+                <button class="modal-button" href="#myModal1">Positions Held</button>
+                <div id="myModal1" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>Campbell County Detention Center Deputy 2009 - 2010</p>
+                            <p>NKU Police Officer 2010 - 2013</p>
+                            <p>Campbell County Police Officer 2013 - Present</p>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--NCFI-->
+        <div class="display_list2">
+            <div class="text"> As a Detective, I have had the opurtunity to attend training at the National Computer Forensics Institute. The NCFI offers training to law
+                 enforcement in the discipline of computer and digital forensics. 
+                <!--Modal-->
+                <button class="modal-button" href="#myModal2">Classes Attended</button>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>Digital Forensic investigations 2021</p>
+                            <p>Open Source Intelligence and Dark Web investigations 2021</p>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.ncfi.usss.gov/ncfi/index.xhtml;jsessionid=DpXK3n1cjmGReSQLu-jU2BnqTkjlby3AWEBEWvmH.master:ncfi-server-one?dswid=9736">
+                <img src="https://user-images.githubusercontent.com/87615778/128062663-7ce6c31b-7fc4-4954-9ee1-0f992fe62daa.jpg"></a> </div>
+        </div>
+        <!--DOCJT-->
+        <div class="display_list1">
+            <div class="image"> <a target="_blank" rel="noopener noreferrer" href="https://www.docjt.ky.gov/"><img src="https://user-images.githubusercontent.com/87615778/128062658-bcae2665-7cb5-4fae-b004-2cca5fd4b8cd.jpg"> </a> </div> 
+            <div class="text"> All police recruits must attend basic academy at the Kentucky Department of Criminal Justice Training. The basic academy is 20 weeks long. 
+                All state certified police officers must complete 40 hours of continuing education per year.
+                <!--Modal-->
+                <button class="modal-button" href="#myModal3">Classes Completed</button>
+                <div id="myModal3" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>Police Basic 2010</p>
+                            <p>Police Firearms Instructor 2011</p>
+                            <p>Police Field Training Officer 2012</p>
+                            <p>Child Abuse investigations 2013</p>
+                            <P>Digital Crime Scene 2014</P>
+                            <p>Criminal investigations 1 2015</p>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+
+
+    <script>
+        var btn = document.querySelectorAll("button.modal-button");
+        var modals = document.querySelectorAll('.modal');
+        var spans = document.getElementsByClassName("close");
+        for (var i = 0; i < btn.length; i++) {
+         btn[i].onclick = function(e) {
+            e.preventDefault();
+            modal = document.querySelector(e.target.getAttribute("href"));
+            modal.style.display = "block";
+         }
+        }
+        for (var i = 0; i < spans.length; i++) {
+         spans[i].onclick = function() {
+            for (var index in modals) {
+              if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+            }
+         }
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+             for (var index in modals) {
+              if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+             }
+            }
+        }
+    </script>
+
+</body>
